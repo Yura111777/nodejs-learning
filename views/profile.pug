@@ -53,7 +53,7 @@ block content
                 .user-view__content
                     .user-view__form-container
                         h2.heading-secondary.ma-bt-md Your account settings
-                        // without API  action='update-user' method='POST'
+                        // without API  action='update-user' method='POST' enctype='multipart/form-data'
                         form.form.form-user-data.update-user
                             .form__group
                                 label.form__label(for='name') Name
@@ -62,9 +62,9 @@ block content
                                 label.form__label(for='email') Email address
                                 input#email.form__input(type='email', value=`${user.email}`, required name='email')
                             .form__group.form__photo-upload
-                                input#photo(type='file' accept='image/*')
-                                img.form__user-photo(src=`/img/users/${user.photo ? user.photo : 'default.jpg'}`, alt='User photo')
-                                a.btn-text(href='') Choose new photo
+                                img.form__user-photo(src=`/img/users/${user.photo}`, alt='User photo')
+                                input#photo(type='file' accept='image/*' name='photo').form__upload
+                                label(for='photo') Choose new photo
                             .form__group.right
                                 button.btn.btn--small.btn--green Save settings
                     .line &nbsp;
