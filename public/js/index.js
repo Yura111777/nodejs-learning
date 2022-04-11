@@ -43,10 +43,13 @@ if (signupButton) {
 if (updateUser) {
   updateUser.addEventListener('submit', e => {
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+    const form = new FormData()
+    form.append('name', document.getElementById('name').value)
+    form.append('email', document.getElementById('email').value)
+    form.append('photo', document.getElementById('photo').files[0])
+
     const photo = document.getElementById('photo').value;
-    updateSetting({ name, email }, 'data');
+    updateSetting(form, 'data');
   });
 }
 

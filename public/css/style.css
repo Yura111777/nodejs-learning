@@ -1334,22 +1334,3 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
-
-#photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-#photo:hover + img + a  {
-  background-color: #55c57a;
-  color: #fff;
-  -webkit-box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
-  box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
